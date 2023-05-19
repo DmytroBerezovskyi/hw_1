@@ -42,6 +42,3 @@ if __name__ == '__main__':
     assert parse_cookie('tv program=serial=film;') == {'tv program': 'serial=film'}
     assert parse_cookie('sport=gym;sport=bicycle;sport=walking') == {'sport': ['gym', 'bicycle', 'walking']}
 
-
-
-
