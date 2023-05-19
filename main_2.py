@@ -49,18 +49,3 @@ if __name__ == '__main__':
     assert parse('https://example.com?campaign=summer_sale') == {'campaign': 'summer_sale'}
     assert parse('https://example.com?location=New+York&interests=food&interests=sports') == {'location': 'New+York', 'interests': ['food', 'sports']}
     assert parse('https://example.com/user?id=12345&token=abcdef') == {'id': '12345', 'token': 'abcdef'}
-
-    
-def parse_cookie(query: str) -> dict:
-    return {}
-
-
-if __name__ == '__main__':
-    assert parse_cookie('name=Dima;') == {'name': 'Dima'}
-    assert parse_cookie('') == {}
-    assert parse_cookie('name=Dima;age=28;') == {'name': 'Dima', 'age': '28'}
-    assert parse_cookie('name=Dima=User;age=28;') == {'name': 'Dima=User', 'age': '28'}
-    
-
-
-
